@@ -1,0 +1,22 @@
+# Source files (only publish built dist/)
+*.ts
+!*.d.ts
+
+# Config files
+tsconfig.json
+tsconfig.build.json
+biome.jsonc
+
+# Test files
+*.test.ts
+*.test.js
+
+# Development files
+node_modules/
+.vscode/
+.idea/
+
+# Misc
+.DS_Store
+*.log
+

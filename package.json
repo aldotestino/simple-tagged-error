@@ -1,0 +1,47 @@
+{
+  "name": "simple-tagged-error",
+  "version": "0.1.0",
+  "description": "A lightweight utility for creating typed error classes with tagged union support",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --target node && bun x tsc --project tsconfig.build.json",
+    "prepublishOnly": "bun run build",
+    "test": "bun test",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "keywords": [
+    "error",
+    "tagged-union",
+    "typescript",
+    "error-handling",
+    "discriminated-union"
+  ],
+  "author": "aldotestino",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aldotestino/simple-tagged-error"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.6",
+    "@types/bun": "latest",
+    "ultracite": "5.6.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
